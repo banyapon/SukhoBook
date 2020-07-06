@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface INetworkAPI {
 
-    @GET("stou.json")
+    @GET("99422/stoubook.json")
     fun getAllPosts(): Observable<List<Magazine>>
 }

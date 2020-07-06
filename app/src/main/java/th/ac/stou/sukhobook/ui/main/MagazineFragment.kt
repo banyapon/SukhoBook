@@ -59,7 +59,8 @@ class MagazineFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         recyclerView = getView()!!.findViewById(R.id.magazine_list) as RecyclerView
         recyclerView!!.layoutManager =  LinearLayoutManager(getContext());
-        val url = "https://vr-abcg.firebaseio.com/"
+        //val url = "https://vr-abcg.firebaseio.com/"
+        val url = "https://scitechno.stou.ac.th/"
         val retrofit = Retrofit.Builder().addConverterFactory(GsonConverterFactory.create(
                 GsonBuilder().create()))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

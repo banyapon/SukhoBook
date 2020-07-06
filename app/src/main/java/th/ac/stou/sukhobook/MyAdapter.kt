@@ -23,9 +23,9 @@ class MyAdapter(val postList: List<Magazine>, val context: Context?) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder.itemView.txtPostTitle.text = postList[position].title
-        holder.itemView.txtPostBody.text = postList[position].authors
+        holder.itemView.txtPostBody.text = postList[position].authors.joinToString(separator = ",")
         holder.itemView.txtPrice.text = "ราคา: "+postList[position].price.toString()+" บาท"
-        Picasso.get().load(postList[position].imagelUrl)
+        Picasso.get().load(postList[position].imageUrl)
             .error(R.mipmap.ic_launcher)
             .placeholder(R.mipmap.ic_launcher)
             .into(holder.itemView.imageView);
